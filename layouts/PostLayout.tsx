@@ -41,8 +41,8 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               {displayImage && (
-                <div className="w-full max-w-4xl mx-auto mb-6">
-                  <div className="relative aspect-video w-full rounded-lg overflow-hidden">
+                <div className="mx-auto mb-6 w-full max-w-4xl">
+                  <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                     <Image
                       src={displayImage}
                       alt={title}

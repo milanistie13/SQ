@@ -12,31 +12,31 @@ interface BreadcrumbItem {
 
 export default function Breadcrumb() {
   const pathname = usePathname()
-  
+
   // Generate breadcrumb items from the current path
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
-    const pathSegments = pathname.split('/').filter(segment => segment !== '')
-    
+    const pathSegments = pathname.split('/').filter((segment) => segment !== '')
+
     const breadcrumbs: BreadcrumbItem[] = [
       {
         label: 'Home',
         href: '/',
-        isCurrent: pathname === '/'
-      }
+        isCurrent: pathname === '/',
+      },
     ]
 
     let accumulatedPath = ''
-    
+
     pathSegments.forEach((segment, index) => {
       accumulatedPath += `/${segment}`
-      
+
       // Skip numeric segments (like page numbers) and 'page' segments
       if (segment === 'page' || !isNaN(Number(segment))) {
         return
       }
 
       let label = segment
-      
+
       // Format labels for better readability
       if (segment === 'blog') {
         label = 'Blog'
@@ -51,14 +51,14 @@ export default function Breadcrumb() {
         // In a real implementation, you might want to fetch the actual post title
         label = segment
           .split('-')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ')
       }
 
       breadcrumbs.push({
         label,
         href: accumulatedPath,
-        isCurrent: index === pathSegments.length - 1
+        isCurrent: index === pathSegments.length - 1,
       })
     })
 

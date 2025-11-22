@@ -12,28 +12,28 @@
 
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
-  --color-primary-50: #FFF0F3;
-  --color-primary-100: #FFE0E7;
-  --color-primary-200: #FFB8C9;
-  --color-primary-300: #FF8FAB;
-  --color-primary-400: #FF668D;
-  --color-primary-500: #FF3864;
-  --color-primary-600: #E6325A;
-  --color-primary-700: #CC2C50;
-  --color-primary-800: #B32646;
-  --color-primary-900: #99203C;
-  --color-primary-950: #801A32;
+  --color-primary-50: #fff0f3;
+  --color-primary-100: #ffe0e7;
+  --color-primary-200: #ffb8c9;
+  --color-primary-300: #ff8fab;
+  --color-primary-400: #ff668d;
+  --color-primary-500: #ff3864;
+  --color-primary-600: #e6325a;
+  --color-primary-700: #cc2c50;
+  --color-primary-800: #b32646;
+  --color-primary-900: #99203c;
+  --color-primary-950: #801a32;
 
-  --color-gray-50: #F5F5F5;
-  --color-gray-100: #E8E8E8;
-  --color-gray-200: #D1D1D1;
-  --color-gray-300: #B8B8B8;
-  --color-gray-400: #9E9E9E;
-  --color-gray-500: #7A7A7A;
-  --color-gray-600: #5E5E5E;
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: #e8e8e8;
+  --color-gray-200: #d1d1d1;
+  --color-gray-300: #b8b8b8;
+  --color-gray-400: #9e9e9e;
+  --color-gray-500: #7a7a7a;
+  --color-gray-600: #5e5e5e;
   --color-gray-700: #424242;
   --color-gray-800: #262626;
-  --color-gray-900: #0F0F0F;
+  --color-gray-900: #0f0f0f;
   --color-gray-950: #000000;
 
   /* Line heights */

@@ -7,15 +7,18 @@ export const metadata = genPageMetadata({ title: 'Categories' })
 
 export default function CategoriesPage() {
   const posts = allCoreContent(sortPosts(allBlogs))
-  
+
   // Get all unique categories
-  const categories = [...new Set(posts.map(post => post.category).filter(Boolean))] as string[]
-  
+  const categories = [...new Set(posts.map((post) => post.category).filter(Boolean))] as string[]
+
   // Count posts per category
-  const categoryCounts = categories.reduce((acc, category) => {
-    acc[category] = posts.filter(post => post.category === category).length
-    return acc
-  }, {} as Record<string, number>)
+  const categoryCounts = categories.reduce(
+    (acc, category) => {
+      acc[category] = posts.filter((post) => post.category === category).length
+      return acc
+    },
+    {} as Record<string, number>
+  )
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -33,9 +36,9 @@ export default function CategoriesPage() {
             <Link
               key={category}
               href={`/blog/category/${category.toLowerCase()}`}
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700"
+              className="block rounded-lg border border-gray-200 bg-white p-6 shadow transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 capitalize">
+              <h3 className="text-xl font-semibold text-gray-900 capitalize dark:text-gray-100">
                 {category}
               </h3>
               <p className="mt-2 text-gray-600 dark:text-gray-400">
