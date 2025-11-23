@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schema Test</title>
+</head>
+<body>
+  <h1>Schema Markup Test</h1>
+  <p>This file demonstrates the schema markup that has been implemented for the homepage.</p>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Shopperqueries",
+    "description": "A blog created with Next.js and Tailwind.css",
+    "url": "https://www.shopperqueries.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.shopperqueries.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shopperqueries",
+      "url": "https://www.shopperqueries.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.shopperqueries.com/static/images/logo.png",
+        "width": "60",
+        "height": "60"
+      }
+    },
+    "inLanguage": "id-id"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Shopperqueries",
+    "description": "A blog created with Next.js and Tailwind.css",
+    "url": "https://www.shopperqueries.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.shopperqueries.com/static/images/logo.png",
+      "width": "60",
+      "height": "60"
+    },
+    "sameAs": [
+      "https://github.com",
+      "https://twitter.com/x",
+      "https://facebook.com",
+      "https://youtube.com",
+      "https://www.linkedin.com",
+      "https://www.instagram.com",
+      "https://medium.com"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "address@yoursite.com",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Shopperqueries",
+    "description": "A blog created with Next.js and Tailwind.css",
+    "url": "https://www.shopperqueries.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Shopperqueries",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.shopperqueries.com/static/images/logo.png",
+        "width": "60",
+        "height": "60"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.shopperqueries.com"
+    },
+    "inLanguage": "id-id"
+  }
+  </script>
+</body>
+</html>
