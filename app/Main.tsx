@@ -13,7 +13,7 @@ export default function Home({ posts }) {
     title: post.title,
     summary: post.summary,
     date: post.date,
-    url: `${siteMetadata.siteUrl}/blog/${post.slug}`
+    url: `${siteMetadata.siteUrl}/blog/${post.slug}`,
   }))
 
   return (

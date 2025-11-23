@@ -21,9 +21,9 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${siteMetadata.siteUrl}/search?q={search_term_string}`
+        urlTemplate: `${siteMetadata.siteUrl}/search?q={search_term_string}`,
       },
-      'query-input': 'required name=search_term_string'
+      'query-input': 'required name=search_term_string',
     },
     publisher: {
       '@type': 'Organization',
@@ -33,10 +33,10 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
         '@type': 'ImageObject',
         url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
         width: '60',
-        height: '60'
-      }
+        height: '60',
+      },
     },
-    inLanguage: siteMetadata.language
+    inLanguage: siteMetadata.language,
   }
 
   const organizationSchema = {
@@ -49,7 +49,7 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
       '@type': 'ImageObject',
       url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
       width: '60',
-      height: '60'
+      height: '60',
     },
     sameAs: [
       siteMetadata.github,
@@ -58,13 +58,13 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
       siteMetadata.youtube,
       siteMetadata.linkedin,
       siteMetadata.instagram,
-      siteMetadata.medium
+      siteMetadata.medium,
     ].filter(Boolean),
     contactPoint: {
       '@type': 'ContactPoint',
       email: siteMetadata.email,
-      contactType: 'customer service'
-    }
+      contactType: 'customer service',
+    },
   }
 
   const blogSchema = {
@@ -80,14 +80,14 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
         '@type': 'ImageObject',
         url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
         width: '60',
-        height: '60'
-      }
+        height: '60',
+      },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': siteMetadata.siteUrl
+      '@id': siteMetadata.siteUrl,
     },
-    inLanguage: siteMetadata.language
+    inLanguage: siteMetadata.language,
   }
 
   // Generate BlogPosting schema for latest posts
@@ -101,11 +101,11 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
     dateModified: post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${siteMetadata.siteUrl}/blog/${post.slug}`
+      '@id': `${siteMetadata.siteUrl}/blog/${post.slug}`,
     },
     author: {
       '@type': 'Person',
-      name: siteMetadata.author
+      name: siteMetadata.author,
     },
     publisher: {
       '@type': 'Organization',
@@ -114,10 +114,10 @@ export default function HomepageSchema({ latestPosts = [] }: HomepageSchemaProps
         '@type': 'ImageObject',
         url: `${siteMetadata.siteUrl}${siteMetadata.siteLogo}`,
         width: '60',
-        height: '60'
-      }
+        height: '60',
+      },
     },
-    inLanguage: siteMetadata.language
+    inLanguage: siteMetadata.language,
   }))
 
   return (
