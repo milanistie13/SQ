@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import ContactForm from './ContactForm'
 
 export const metadata = genPageMetadata({
   title: 'Contact',
@@ -93,64 +94,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="space-y-6">
-            <form className="space-y-4">
-              <div>
-                <label
-                  htmlFor="fullName"
-                  className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-                  placeholder="Masukkan nama lengkap Anda"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-                  placeholder="Masukkan alamat email Anda"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
-                >
-                  Your Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 focus:outline-none dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-                  placeholder="Tulis pesan Anda di sini..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full rounded-md bg-blue-600 px-4 py-2 text-white transition-colors duration-200 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </div>
