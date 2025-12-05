@@ -101,6 +101,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         data-key="fuaTiaqNzFCql95G9KhLPA"
         strategy="afterInteractive"
       />
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7234992698858515"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
