@@ -20,8 +20,8 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/shopperqueries',
   threads: 'https://www.threads.net/shopperqueries',
   instagram: 'https://www.instagram.com/shopperqueries',
-  medium: 'https://medium.com/shopperqueries',
-  bluesky: 'https://bsky.app/shopperqueries',
+  medium: 'https://medium.com/',
+  bluesky: 'https://bsky.app',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,

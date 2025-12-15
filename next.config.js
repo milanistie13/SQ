@@ -92,6 +92,29 @@ module.exports = () => {
         use: ['@svgr/webpack'],
       })
 
+      // Exclude node_modules and .yarn/cache from file watching to avoid inotify limit
+      if (options.dev) {
+        config.watchOptions = {
+          ...config.watchOptions,
+          ignored: [
+            '**/node_modules/**',
+            '**/.yarn/cache/**',
+            '**/.git/**',
+            '**/.next/**',
+          ],
+        }
+
+        // Use polling if environment variable is set (fallback for inotify limit issues)
+        if (process.env.USE_POLLING === 'true') {
+          config.watchOptions = {
+            ...config.watchOptions,
+            poll: 1000, // Check for changes every second
+            aggregateTimeout: 300, // Delay rebuild
+          }
+          console.log('Using polling for file watching (inotify limit workaround)')
+        }
+      }
+
       return config
     },
   })
